@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <title>AngularJS App</title>
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body ng-controller="myController">
+  <h1>My AngularJS App</h1>
+  <form ng-submit="addItem()">
+    <input type="text" ng-model="newItem" placeholder="Enter a new item" required>
+    <button type="submit">Add Item</button>
+  </form>
+  <ul>
+    <li ng-repeat="item in items">
+      {{ item }}
+      <button ng-click="deleteItem(item)">Delete</button>
+    </li>
+  </ul>
+</body>
+
+</html>
+
